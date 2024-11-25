@@ -12,7 +12,6 @@ namespace SistemaBarcos.UI.Models
         {
             if (d1 == string.Empty)
             {
-                MessageBox.Show("O Login/Senha não pode ser vazio");
                 return false;
             }
             return true;
@@ -22,7 +21,6 @@ namespace SistemaBarcos.UI.Models
         {
             if (d1 == string.Empty && d2 == string.Empty && d3 == string.Empty)
             {
-                MessageBox.Show("O Login/Senha não pode ser vazio");
                 return false;
             }
             return true;

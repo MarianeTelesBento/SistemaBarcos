@@ -39,11 +39,20 @@ namespace SistemaBarcos.UI
         private void BTNCadastrarBarco_Click(object sender, EventArgs e)
         {
             Cadastro cadastro = new Cadastro();
-            int DadoCadastrado = cadastro.CadastrarDados("Barco", TXTNomeBarco.Text, TXTFabricacaoBarco.Text, TXTCapacidadeBarco.Text);
 
             bool validacao = cadastro.ValidarCampo(TXTNomeBarco.Text, TXTFabricacaoBarco.Text, TXTCapacidadeBarco.Text);
+            int DadoCadastrado = 0;
 
-            if (validacao && DadoCadastrado > 0)
+            if (validacao)
+            {
+                 DadoCadastrado = cadastro.CadastrarDados("Barco", TXTNomeBarco.Text, TXTFabricacaoBarco.Text, TXTCapacidadeBarco.Text);
+            }
+            else
+            {
+                MessageBox.Show("O Campo não pode ser vazio");
+            }
+            
+            if (DadoCadastrado > 0)
             {
                 MessageBox.Show("Dados cadastrados com sucesso.");
                 TXTNomeBarco.Clear();
@@ -56,7 +65,6 @@ namespace SistemaBarcos.UI
             }
 
            
-
         }
     }
 }
