@@ -19,8 +19,6 @@ namespace SistemaBarcos.UI
             InitializeComponent();
         }
 
-
-
         private void TXTNomeBarco_TextChanged(object sender, EventArgs e)
         {
 
@@ -38,18 +36,28 @@ namespace SistemaBarcos.UI
 
         private void BTNCadastrarBarco_Click(object sender, EventArgs e)
         {
+            int DadoCadastrado = 0;
+
             Cadastro cadastro = new Cadastro();
 
-            bool validacao = cadastro.ValidarCampo(TXTNomeBarco.Text, TXTFabricacaoBarco.Text, TXTCapacidadeBarco.Text);
-            int DadoCadastrado = 0;
+            bool validacao = cadastro.ValidarCampoVazio(TXTNomeBarco.Text, TXTFabricacaoBarco.Text, TXTCapacidadeBarco.Text);
+            bool validarAno = cadastro.ValidarAno(TXTFabricacaoBarco.Text);
+            
 
             if (validacao)
             {
-                 DadoCadastrado = cadastro.CadastrarDados("Barco", TXTNomeBarco.Text, TXTFabricacaoBarco.Text, TXTCapacidadeBarco.Text);
+                if (validarAno)
+                {
+                    DadoCadastrado = cadastro.CadastrarDados("Barco", TXTNomeBarco.Text, TXTFabricacaoBarco.Text,  TXTCapacidadeBarco.Text);
+                }
+                else
+                {
+                    MessageBox.Show("O ano inválido");
+                } 
             }
             else
             {
-                MessageBox.Show("O Campo não pode ser vazio");
+                MessageBox.Show("O Campo não pode ser vazio");//Arrumar a verificação do ano
             }
             
             if (DadoCadastrado > 0)
@@ -61,10 +69,9 @@ namespace SistemaBarcos.UI
             }
             else
             {
-                MessageBox.Show("Nenhum dado foi inserido.");
+                MessageBox.Show("Nenhum dado foi cadastrado");
             }
 
-           
         }
     }
 }

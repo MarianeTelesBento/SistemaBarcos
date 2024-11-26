@@ -17,13 +17,13 @@ namespace SistemaBarcos.UI.Models
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
 
-            SqlCommand command = new SqlCommand($"insert into {table} values(@d1, @d2, @d3); ", connection);
+            SqlCommand inserirCommand = new SqlCommand($"insert into {table} values(@d1, @d2, @d3); ", connection);
 
-            command.Parameters.AddWithValue("@d1", d1);
-            command.Parameters.AddWithValue("@d2", d2);
-            command.Parameters.AddWithValue("@d3", d3);
+            inserirCommand.Parameters.AddWithValue("@d1", d1);
+            inserirCommand.Parameters.AddWithValue("@d2", d2);
+            inserirCommand.Parameters.AddWithValue("@d3", d3);
 
-            return command.ExecuteNonQuery();
+            return inserirCommand.ExecuteNonQuery();
         }
     }
 }

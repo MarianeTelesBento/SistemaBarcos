@@ -47,6 +47,7 @@ namespace SistemaBarcos.UI
             }
             else
             {
+                MessageBox.Show("ID não encontrado");
                 MessageBox.Show("Nenhum dado foi excluido.");
             }
 
