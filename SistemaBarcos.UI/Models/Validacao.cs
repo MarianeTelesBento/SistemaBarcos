@@ -9,7 +9,8 @@ namespace SistemaBarcos.UI.Models
     public class Validacao
     {
         const int anoMinino = 1200;
-        const int anoAtual = 2024;
+        int anoAtual = Convert.ToInt32(DateTime.Now.ToString("yyyy"));
+        string dataAtual = DateTime.Now.ToString("dd/MM/yyyy");
 
         //Verifica de há dados no campo
         public bool ValidarCampoVazio(string d1)
@@ -31,25 +32,47 @@ namespace SistemaBarcos.UI.Models
 
 
         //Verifica se é um número
-        public bool ValidarNumeros(string d1)
+        public bool ValidarNumero(string d1)
         {
-            bool Int32.TryParse(d1, out int result);
-            if (try())
-            {
-                return false;
-            }
-            return true;
-        }
+            bool sucesso = Int32.TryParse(d1, out int result);
 
+            if (sucesso)
+            {
+                return true;
+            }
+            return false;
+        }
 
         //Verifica se o ano está entre 1200 e 2024
         public bool ValidarAno(string ano)
         {
-            var anoConvert = int.Parse(ano);
+            bool valido = ValidarNumero(ano);
 
-            if (anoConvert >= anoMinino && anoConvert <= anoAtual)
+            if (valido)
             {
-                return true;
+                var anoConvert = int.Parse(ano);
+
+                if (anoConvert >= anoMinino && anoConvert <= anoAtual)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        //Verifica se o ano está abaixo de 2024
+        public bool ValidarData(string data)
+        {
+            bool valido = ValidarNumero(data);
+
+            if (valido)
+            {
+                var anoConvert = int.Parse(data);
+
+                if (anoConvert <= anoAtual)
+                {
+                    return true;
+                }
             }
             return false;
         }

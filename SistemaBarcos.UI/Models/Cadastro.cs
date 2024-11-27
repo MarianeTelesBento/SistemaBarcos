@@ -25,5 +25,6 @@ namespace SistemaBarcos.UI.Models
 
             return inserirCommand.ExecuteNonQuery();
         }
+        
     }
 }

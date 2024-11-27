@@ -19,6 +19,13 @@ namespace SistemaBarcos.UI
             InitializeComponent();
         }
 
+        public void LimparCampos()
+        {
+            TXTNomeCliente.Clear();
+            TXTEmailCliente.Clear();
+            TXTTelefoneCliente.Clear();
+        }
+
         private void TXTNomeCliente_TextChanged(object sender, EventArgs e)
         {
 
@@ -34,36 +41,34 @@ namespace SistemaBarcos.UI
 
         private void BTNCadastrarCliente_Click(object sender, EventArgs e)
         {
-            int DadoCadastrado = 0;
-
             Cadastro cadastro = new Cadastro();
 
-            bool validacao = cadastro.ValidarCampoVazio(TXTNomeCliente.Text, TXTEmailCliente.Text, TXTTelefoneCliente.Text);
-            bool validarAno = cadastro.ValidarAno(TXTEmailCliente.Text);
+            int dadoCadastrado = 0;
 
+            bool validacao = cadastro.ValidarCampoVazio(TXTNomeCliente.Text, TXTEmailCliente.Text, TXTTelefoneCliente.Text);
+            bool validarNumero = cadastro.ValidarAno(TXTTelefoneCliente.Text);
 
             if (validacao)
             {
-                if (validarAno)
+                if (validarNumero)
                 {
-                    DadoCadastrado = cadastro.CadastrarDados("Barco", TXTNomeCliente.Text, TXTEmailCliente.Text, TXTTelefoneCliente.Text);
+                    dadoCadastrado = cadastro.CadastrarDados("Cliente", TXTNomeCliente.Text, TXTEmailCliente.Text, TXTTelefoneCliente.Text);
                 }
                 else
                 {
-                    MessageBox.Show("O ano inválido");
+                    MessageBox.Show("Numero de telefone inválido");
+                    TXTTelefoneCliente.Clear();
                 }
             }
             else
             {
-                MessageBox.Show("O Campo não pode ser vazio");//Arrumar a verificação do ano
+                MessageBox.Show("O Campo não pode ser vazio");
             }
 
-            if (DadoCadastrado > 0)
+            if (dadoCadastrado > 0)
             {
                 MessageBox.Show("Dados cadastrados com sucesso.");
-                TXTNomeCliente.Clear();
-                TXTEmailCliente.Clear();
-                TXTTelefoneCliente.Clear();
+                LimparCampos();
             }
             else
             {
