@@ -28,50 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            BTNExcluirFuncionario = new Button();
-            TXTIdFuncionario = new TextBox();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcluirFuncionario));
+            this.label1 = new System.Windows.Forms.Label();
+            this.BTNExcluirFuncionario = new System.Windows.Forms.Button();
+            this.TXTIdFuncionario = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(569, 167);
-            label1.Name = "label1";
-            label1.Size = new Size(84, 15);
-            label1.TabIndex = 0;
-            label1.Text = "ID Funcionario";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(597, 181);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 15);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "ID Funcionario";
             // 
             // BTNExcluirFuncionario
             // 
-            BTNExcluirFuncionario.Location = new Point(578, 236);
-            BTNExcluirFuncionario.Name = "BTNExcluirFuncionario";
-            BTNExcluirFuncionario.Size = new Size(75, 23);
-            BTNExcluirFuncionario.TabIndex = 1;
-            BTNExcluirFuncionario.Text = "Excluir";
-            BTNExcluirFuncionario.UseVisualStyleBackColor = true;
-            BTNExcluirFuncionario.Click += BTNExcluirFuncionario_Click;
+            this.BTNExcluirFuncionario.Location = new System.Drawing.Point(606, 250);
+            this.BTNExcluirFuncionario.Name = "BTNExcluirFuncionario";
+            this.BTNExcluirFuncionario.Size = new System.Drawing.Size(75, 23);
+            this.BTNExcluirFuncionario.TabIndex = 1;
+            this.BTNExcluirFuncionario.Text = "Excluir";
+            this.BTNExcluirFuncionario.UseVisualStyleBackColor = true;
             // 
             // TXTIdFuncionario
             // 
-            TXTIdFuncionario.Location = new Point(566, 185);
-            TXTIdFuncionario.Name = "TXTIdFuncionario";
-            TXTIdFuncionario.Size = new Size(100, 23);
-            TXTIdFuncionario.TabIndex = 2;
-            TXTIdFuncionario.TextChanged += TXTIdFuncionario_TextChanged;
+            this.TXTIdFuncionario.Location = new System.Drawing.Point(594, 199);
+            this.TXTIdFuncionario.Name = "TXTIdFuncionario";
+            this.TXTIdFuncionario.Size = new System.Drawing.Size(100, 23);
+            this.TXTIdFuncionario.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-237, -8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(710, 460);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // ExcluirFuncionario
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(TXTIdFuncionario);
-            Controls.Add(BTNExcluirFuncionario);
-            Controls.Add(label1);
-            Name = "ExcluirFuncionario";
-            Text = "ExcluirFuncionario";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.TXTIdFuncionario);
+            this.Controls.Add(this.BTNExcluirFuncionario);
+            this.Controls.Add(this.label1);
+            this.Name = "ExcluirFuncionario";
+            this.Text = "ExcluirFuncionario";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -79,5 +93,6 @@
         private Label label1;
         private Button BTNExcluirFuncionario;
         private TextBox TXTIdFuncionario;
+        private PictureBox pictureBox1;
     }
 }

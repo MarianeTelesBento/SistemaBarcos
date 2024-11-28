@@ -28,92 +28,104 @@
         /// </summary>
         private void InitializeComponent()
         {
-            BTNCadastrarFuncionario = new Button();
-            TXTAdmissaoFuncionario = new TextBox();
-            TXTCargoFuncionario = new TextBox();
-            TXTNomeFuncionario = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            label3 = new Label();
-            SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroFuncionario));
+            this.BTNCadastrarFuncionario = new System.Windows.Forms.Button();
+            this.TXTAdmissaoFuncionario = new System.Windows.Forms.TextBox();
+            this.TXTCargoFuncionario = new System.Windows.Forms.TextBox();
+            this.TXTNomeFuncionario = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // BTNCadastrarFuncionario
             // 
-            BTNCadastrarFuncionario.Location = new Point(584, 268);
-            BTNCadastrarFuncionario.Name = "BTNCadastrarFuncionario";
-            BTNCadastrarFuncionario.Size = new Size(75, 23);
-            BTNCadastrarFuncionario.TabIndex = 0;
-            BTNCadastrarFuncionario.Text = "Cadastrar";
-            BTNCadastrarFuncionario.UseVisualStyleBackColor = true;
-            BTNCadastrarFuncionario.Click += BTNCadastrarFuncionario_Click;
+            this.BTNCadastrarFuncionario.Location = new System.Drawing.Point(611, 282);
+            this.BTNCadastrarFuncionario.Name = "BTNCadastrarFuncionario";
+            this.BTNCadastrarFuncionario.Size = new System.Drawing.Size(75, 23);
+            this.BTNCadastrarFuncionario.TabIndex = 0;
+            this.BTNCadastrarFuncionario.Text = "Cadastrar";
+            this.BTNCadastrarFuncionario.UseVisualStyleBackColor = true;
             // 
             // TXTAdmissaoFuncionario
             // 
-            TXTAdmissaoFuncionario.Location = new Point(571, 227);
-            TXTAdmissaoFuncionario.Name = "TXTAdmissaoFuncionario";
-            TXTAdmissaoFuncionario.Size = new Size(100, 23);
-            TXTAdmissaoFuncionario.TabIndex = 1;
-            TXTAdmissaoFuncionario.TextChanged += TXTAdmissaoFuncionario_TextChanged;
+            this.TXTAdmissaoFuncionario.Location = new System.Drawing.Point(598, 241);
+            this.TXTAdmissaoFuncionario.Name = "TXTAdmissaoFuncionario";
+            this.TXTAdmissaoFuncionario.Size = new System.Drawing.Size(100, 23);
+            this.TXTAdmissaoFuncionario.TabIndex = 1;
             // 
             // TXTCargoFuncionario
             // 
-            TXTCargoFuncionario.Location = new Point(571, 183);
-            TXTCargoFuncionario.Name = "TXTCargoFuncionario";
-            TXTCargoFuncionario.Size = new Size(100, 23);
-            TXTCargoFuncionario.TabIndex = 2;
-            TXTCargoFuncionario.TextChanged += TXTCargoFuncionario_TextChanged;
+            this.TXTCargoFuncionario.Location = new System.Drawing.Point(598, 197);
+            this.TXTCargoFuncionario.Name = "TXTCargoFuncionario";
+            this.TXTCargoFuncionario.Size = new System.Drawing.Size(100, 23);
+            this.TXTCargoFuncionario.TabIndex = 2;
             // 
             // TXTNomeFuncionario
             // 
-            TXTNomeFuncionario.Location = new Point(571, 139);
-            TXTNomeFuncionario.Name = "TXTNomeFuncionario";
-            TXTNomeFuncionario.Size = new Size(100, 23);
-            TXTNomeFuncionario.TabIndex = 3;
-            TXTNomeFuncionario.TextChanged += TXTNomeFuncionario_TextChanged;
+            this.TXTNomeFuncionario.Location = new System.Drawing.Point(598, 153);
+            this.TXTNomeFuncionario.Name = "TXTNomeFuncionario";
+            this.TXTNomeFuncionario.Size = new System.Drawing.Size(100, 23);
+            this.TXTNomeFuncionario.TabIndex = 3;
             // 
             // label1
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(571, 121);
-            label1.Name = "label1";
-            label1.Size = new Size(40, 15);
-            label1.TabIndex = 4;
-            label1.Text = "Nome";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(598, 135);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 15);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Nome";
             // 
             // label2
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(571, 165);
-            label2.Name = "label2";
-            label2.Size = new Size(39, 15);
-            label2.TabIndex = 5;
-            label2.Text = "Cargo";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(598, 179);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 15);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Cargo";
             // 
             // label3
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(571, 209);
-            label3.Name = "label3";
-            label3.Size = new Size(59, 15);
-            label3.TabIndex = 6;
-            label3.Text = "Admissão";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(598, 223);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 15);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Admissão";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(-240, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(710, 460);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 10;
+            this.pictureBox1.TabStop = false;
             // 
             // CadastroFuncionario
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label3);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(TXTNomeFuncionario);
-            Controls.Add(TXTCargoFuncionario);
-            Controls.Add(TXTAdmissaoFuncionario);
-            Controls.Add(BTNCadastrarFuncionario);
-            Name = "CadastroFuncionario";
-            Text = "CadastroFuncionario";
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TXTNomeFuncionario);
+            this.Controls.Add(this.TXTCargoFuncionario);
+            this.Controls.Add(this.TXTAdmissaoFuncionario);
+            this.Controls.Add(this.BTNCadastrarFuncionario);
+            this.Name = "CadastroFuncionario";
+            this.Text = "CadastroFuncionario";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -125,5 +137,6 @@
         private Label label1;
         private Label label2;
         private Label label3;
+        private PictureBox pictureBox1;
     }
 }

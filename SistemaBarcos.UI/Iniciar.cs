@@ -55,5 +55,10 @@ namespace SistemaBarcos.UI
             ExcluirFuncionario excluirFuncionario = new ExcluirFuncionario();
             excluirFuncionario.Show();
         }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+
+        }
     }
 }
