@@ -48,6 +48,7 @@
             this.BTNCadastrarFuncionario.TabIndex = 0;
             this.BTNCadastrarFuncionario.Text = "Cadastrar";
             this.BTNCadastrarFuncionario.UseVisualStyleBackColor = true;
+            this.BTNCadastrarFuncionario.Click += new System.EventHandler(this.BTNCadastrarFuncionario_Click);
             // 
             // TXTAdmissaoFuncionario
             // 
@@ -55,6 +56,7 @@
             this.TXTAdmissaoFuncionario.Name = "TXTAdmissaoFuncionario";
             this.TXTAdmissaoFuncionario.Size = new System.Drawing.Size(100, 23);
             this.TXTAdmissaoFuncionario.TabIndex = 1;
+            this.TXTAdmissaoFuncionario.TextChanged += new System.EventHandler(this.TXTAdmissaoFuncionario_TextChanged);
             // 
             // TXTCargoFuncionario
             // 
@@ -62,6 +64,7 @@
             this.TXTCargoFuncionario.Name = "TXTCargoFuncionario";
             this.TXTCargoFuncionario.Size = new System.Drawing.Size(100, 23);
             this.TXTCargoFuncionario.TabIndex = 2;
+            this.TXTCargoFuncionario.TextChanged += new System.EventHandler(this.TXTCargoFuncionario_TextChanged);
             // 
             // TXTNomeFuncionario
             // 
@@ -69,6 +72,7 @@
             this.TXTNomeFuncionario.Name = "TXTNomeFuncionario";
             this.TXTNomeFuncionario.Size = new System.Drawing.Size(100, 23);
             this.TXTNomeFuncionario.TabIndex = 3;
+            this.TXTNomeFuncionario.TextChanged += new System.EventHandler(this.TXTNomeFuncionario_TextChanged);
             // 
             // label1
             // 

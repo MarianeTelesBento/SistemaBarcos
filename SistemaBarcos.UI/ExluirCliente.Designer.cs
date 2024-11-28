@@ -51,6 +51,7 @@
             this.TXTIdCliente.Name = "TXTIdCliente";
             this.TXTIdCliente.Size = new System.Drawing.Size(100, 23);
             this.TXTIdCliente.TabIndex = 1;
+            this.TXTIdCliente.TextChanged += new System.EventHandler(this.TXTIdCliente_TextChanged);
             // 
             // BTNExcluirCliente
             // 
@@ -60,6 +61,7 @@
             this.BTNExcluirCliente.TabIndex = 2;
             this.BTNExcluirCliente.Text = "Excluir";
             this.BTNExcluirCliente.UseVisualStyleBackColor = true;
+            this.BTNExcluirCliente.Click += new System.EventHandler(this.BTNExcluirCliente_Click);
             // 
             // pictureBox1
             // 

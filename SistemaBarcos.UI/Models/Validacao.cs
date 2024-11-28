@@ -40,7 +40,10 @@ namespace SistemaBarcos.UI.Models
             {
                 return true;
             }
-            return false;
+            else
+            {
+                return false;
+            }
         }
 
         //Verifica se o ano está entre 1200 e 2024

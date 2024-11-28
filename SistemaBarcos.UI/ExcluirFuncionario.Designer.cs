@@ -53,6 +53,7 @@
             this.BTNExcluirFuncionario.TabIndex = 1;
             this.BTNExcluirFuncionario.Text = "Excluir";
             this.BTNExcluirFuncionario.UseVisualStyleBackColor = true;
+            this.BTNExcluirFuncionario.Click += new System.EventHandler(this.BTNExcluirFuncionario_Click);
             // 
             // TXTIdFuncionario
             // 
@@ -60,6 +61,7 @@
             this.TXTIdFuncionario.Name = "TXTIdFuncionario";
             this.TXTIdFuncionario.Size = new System.Drawing.Size(100, 23);
             this.TXTIdFuncionario.TabIndex = 2;
+            this.TXTIdFuncionario.TextChanged += new System.EventHandler(this.TXTIdFuncionario_TextChanged);
             // 
             // pictureBox1
             // 

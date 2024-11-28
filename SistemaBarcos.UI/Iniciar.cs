@@ -17,46 +17,52 @@ namespace SistemaBarcos.UI
             InitializeComponent();
         }
 
-        //Barco
-        private void BTNCadastroBarco_Click(object sender, EventArgs e)
-        {
-            CadastroBarco cadastroBarco = new CadastroBarco();
-            cadastroBarco.Show();
-        }
-
-        private void BTNExcluirBarco_Click(object sender, EventArgs e)
-        {
-            ExcluirBarco excluirBarco = new ExcluirBarco();
-            excluirBarco.Show();
-        }
-
-        //Cliente
-        private void BTNCadastrarCliente_Click(object sender, EventArgs e)
+        private void BTNCadastrarCliente_Click_1(object sender, EventArgs e)
         {
             CadastroCliente cadastroCliente = new CadastroCliente();
             cadastroCliente.Show();
         }
 
-        private void BTNExcluirCliente_Click(object sender, EventArgs e)
+        private void BTNExcluirCliente_Click_1(object sender, EventArgs e)
         {
-            ExcluirBarco excluirBarco = new ExcluirBarco();
-            excluirBarco.Show();
+            ExluirCliente excluirCliente = new ExluirCliente();
+            excluirCliente.Show();
         }
 
-        //Funcionário
-        private void BTNCadastrarFuncionario_Click(object sender, EventArgs e)
+        private void BTNCadastrarFuncionario_Click_1(object sender, EventArgs e)
         {
             CadastroFuncionario cadastroFuncionario = new CadastroFuncionario();
             cadastroFuncionario.Show();
         }
 
-        private void BTNExcluirFuncionario_Click(object sender, EventArgs e)
+        private void BTNExcluirFuncionario_Click_1(object sender, EventArgs e)
         {
             ExcluirFuncionario excluirFuncionario = new ExcluirFuncionario();
             excluirFuncionario.Show();
         }
 
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        private void BTNExcluirBarco_Click_1(object sender, EventArgs e)
+        {
+            ExcluirBarco excluirBarco = new ExcluirBarco();
+            excluirBarco.Show();
+        }
+
+        private void BTNCadastroBarco_Click_1(object sender, EventArgs e)
+        {
+            CadastroBarco cadastroBarco = new CadastroBarco();
+            cadastroBarco.Show();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }

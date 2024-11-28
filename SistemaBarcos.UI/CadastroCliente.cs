@@ -46,7 +46,7 @@ namespace SistemaBarcos.UI
             int dadoCadastrado = 0;
 
             bool validacao = cadastro.ValidarCampoVazio(TXTNomeCliente.Text, TXTEmailCliente.Text, TXTTelefoneCliente.Text);
-            bool validarNumero = cadastro.ValidarAno(TXTTelefoneCliente.Text);
+            bool validarNumero = cadastro.ValidarNumero(TXTTelefoneCliente.Text);
 
             if (validacao)
             {
