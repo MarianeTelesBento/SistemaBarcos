@@ -66,5 +66,16 @@ namespace SistemaBarcos.UI
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            BuscarBarco buscarBarco = new BuscarBarco();
+            buscarBarco.Show();
+        }
     }
 }

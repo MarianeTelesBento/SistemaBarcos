@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SistemaBarcos.UI.Models;
 
 namespace SistemaBarcos.UI
 {
@@ -34,7 +35,9 @@ namespace SistemaBarcos.UI
 
         private void BTNBuscar_Click(object sender, EventArgs e)
         {
+            Editar editar = new Editar();
 
+            editar.EditarDados("Barco", TXTIDBuscaBarco.Text);
         }
 
         private void BTNBuscarSalvar_Click(object sender, EventArgs e)

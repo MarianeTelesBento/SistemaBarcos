@@ -7,27 +7,33 @@ using Microsoft.Data.SqlClient;
 
 namespace SistemaBarcos.UI.Models
 {
-    public class Cadastro : Validacao
+    public class Editar : Validacao
     {
         
-        public int CadastrarDados(string table, string d1, string d2, string d3)
+        public void EditarDados(string table, string d1)
         {
             string connectionString = "Data Source=FAC0539673W10-1;Initial Catalog=M34Db;User ID=sa;Password=123456;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-
-            /*Data Source=DESKTOP-B2J8C6H\\SQLEXPRESS;Initial Catalog=M34Dd;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False*/
 
             SqlConnection connection = new SqlConnection(connectionString);
             connection.Open();
 
-            SqlCommand inserirCommand = new SqlCommand($"insert into {table} values(@d1, @d2, @d3); ", connection);
+            SqlCommand pesquisaCommand = new SqlCommand($"SELECT * FROM {table} WHERE id = @d1; ", connection);
 
-            /*SqlCommand GetIdCommand = new SqlCommand($"Select * {table} values(@d1, @d2, @d3); ", connection);*/
+            pesquisaCommand.Parameters.AddWithValue("@d1", d1);
 
-            inserirCommand.Parameters.AddWithValue("@d1", d1);
-            inserirCommand.Parameters.AddWithValue("@d2", d2);
-            inserirCommand.Parameters.AddWithValue("@d3", d3);
+            SqlDataReader reader = pesquisaCommand.ExecuteReader();
 
-            return inserirCommand.ExecuteNonQuery();
+            if (reader.HasRows)//Preenche os TEXTS se ouver linha
+            {
+                d1 = reader["CapacidadePassageirosBarco"].ToString();
+            }
+            else
+            {
+                MessageBox.Show("ID, não encontrado");
+            }
+
+            connection.Close();
+
         }
         
     }
